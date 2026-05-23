@@ -1,0 +1,20 @@
+把本文件夹里的所有内容上传到 GitHub 仓库 veritas123-s/ideafac 的根目录。
+
+不要上传外层 zip；GitHub Pages 不会自动解压 zip。
+
+最快步骤：
+1. 打开 https://github.com/veritas123-s/ideafac
+2. 点 Add file -> Upload files
+3. 打开本地文件夹 C:\Users\MSI-NB\Desktop\ideafac_github_upload_ready
+4. 全选里面的所有文件和文件夹，拖到 GitHub 上传区域
+5. Commit changes
+
+上线后访问：
+https://veritas123-s.github.io/ideafac/
+
+游戏入口：
+https://veritas123-s.github.io/ideafac/ark-zero/
+
+AI 功能：
+如果还没有部署 api-proxy，游戏会使用本地角色档案兜底回复。
+如果部署了代理，把 ark-zero/config.js 里的 window.ARK_CHAT_API 改成你的代理 /api/chat 地址。
