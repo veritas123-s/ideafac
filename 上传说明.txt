@@ -18,3 +18,7 @@ https://veritas123-s.github.io/ideafac/ark-zero/
 AI 功能：
 如果还没有部署 api-proxy，游戏会使用本地角色档案兜底回复。
 如果部署了代理，把 ark-zero/config.js 里的 window.ARK_CHAT_API 改成你的代理 /api/chat 地址。
+
+注意：
+不要把 C:\Users\MSI-NB\Desktop\arkzero_backend_private_do_not_upload 上传到 GitHub。
+那个目录是私有后端运行目录，里面可以放 API key。
