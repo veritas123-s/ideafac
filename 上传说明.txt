@@ -1,13 +1,12 @@
 把本文件夹里的所有内容上传到 GitHub 仓库 veritas123-s/ideafac 的根目录。
-
-不要上传外层 zip；GitHub Pages 不会自动解压 zip。
+不要只上传外层 zip；GitHub Pages 不会自动解压 zip。
 
 最快步骤：
 1. 打开 https://github.com/veritas123-s/ideafac
-2. 点 Add file -> Upload files
+2. 点击 Add file -> Upload files
 3. 打开本地文件夹 C:\Users\MSI-NB\Desktop\ideafac_github_upload_ready
 4. 全选里面的所有文件和文件夹，拖到 GitHub 上传区域
-5. Commit changes
+5. 点击 Commit changes
 
 上线后访问：
 https://veritas123-s.github.io/ideafac/
@@ -16,9 +15,18 @@ https://veritas123-s.github.io/ideafac/
 https://veritas123-s.github.io/ideafac/ark-zero/
 
 AI 功能：
-如果还没有部署 api-proxy，游戏会使用本地角色档案兜底回复。
-如果部署了代理，把 ark-zero/config.js 里的 window.ARK_CHAT_API 改成你的代理 /api/chat 地址。
+本地预览时，前端会自动连接 http://127.0.0.1:5173/api/chat。
+这个地址对应你的私有后端目录：
+C:\Users\MSI-NB\Desktop\arkzero_backend_private_do_not_upload
+
+公网 GitHub Pages 不能保存 API key。如果要让公网玩家也能使用真实 AI，请先部署 api-proxy/vercel 或 api-proxy/node-campus 代理，再编辑：
+ark-zero/config.js
+
+把这一行：
+const ARK_DEPLOYED_CHAT_API = "";
+
+改成：
+const ARK_DEPLOYED_CHAT_API = "https://你的代理域名/api/chat";
 
 注意：
-不要把 C:\Users\MSI-NB\Desktop\arkzero_backend_private_do_not_upload 上传到 GitHub。
-那个目录是私有后端运行目录，里面可以放 API key。
+不要把 C:\Users\MSI-NB\Desktop\arkzero_backend_private_do_not_upload 上传到 GitHub。那个目录是私有后端运行目录，里面可以放 API key。
